@@ -1,0 +1,101 @@
+@import "../../../colors.module.scss";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnCta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 4px;
+    color: $ligthGray;
+    text-decoration: none;
+    border: 1px solid  $ligthGray;
+    width: 150px;
+
+    .btnImg{
+        width: 85%;
+    }
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.col{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    line-height: 25px;
+    span{
+        display: block;
+    }
+}
+
+.imgPresentation{
+    width: 550px;
+}
+
+.subTitle{
+    font-size: 18px;
+    font-weight: bold;
+    color: $ligthRed;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.description{
+    font-size: 20px;
+    color: $ligthGray;
+    padding: 20px 0px 40px 0px;
+}
+
+.btnCta{
+    font-weight: bold;
+    color: #fff;
+
+    display: flex;
+    min-width: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 2px solid $ligthRed;
+    transition: .5s ease;
+
+    .btnImg{
+        width: 11px;
+    }
+
+    &:hover{
+        color: $ligthGray;
+        border-color: $darkRed;
+        background-color: transparent;
+    }
+}
+    
+.arrowDown{
+    width: 30px;
+    padding-top: 50px;
+    animation: arrowAnimeted 1s infinite alternate ;
+}
+
+@keyframes arrowAnimeted {
+    to{
+        transform: translateY(40px);
+    }
+}
