@@ -1,0 +1,93 @@
+@import "../../../colors.module.scss";
+
+.sectionTitle{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 10px;
+}
+
+.card{
+    width: 340px;
+    height: 280px;
+    border-radius: 8px;
+    padding: 14px ;
+    background-size: cover;
+    display: flex ;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    .cardTitle{
+        transition: .5s ease;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .cardDescription{
+        font-size: 15px;
+        color: $ligthGray;
+    }
+
+    	&:hover {
+    transform: scale(1.03);
+    .cardTitle {
+      font-size: 18px;
+      margin-left: 8px;
+    }
+}
+}
+
+.card1{
+    @extend .card;
+    background-image: url("../../../../../public/homeNoAuth/imgFrontend.png");
+    margin-bottom: 40px;
+    transition: .5s ease;
+}
+.card2{
+    @extend .card;
+    background-image: url("../../../../../public/homeNoAuth/imgBackend.png");
+    margin-bottom: 40px;
+    transition: .5s ease;
+}
+
+.card3{
+    @extend .card;
+    background-image: url("../../../../../public/homeNoAuth/imgGit.png");
+    margin-bottom: 40px;
+    transition: .5s ease;
+
+}
+
+.card4{
+  background-image: url("../../../../../public/homeNoAuth/imgProjects.png");
+    margin-bottom: 40px;
+    transition: .5s ease;
+
+    @extend .card;
+
+}
+
+.card5{
+  background-image: url("../../../../../public/homeNoAuth/imgCareer.png");
+    margin-bottom: 40px;
+    transition: .5s ease;
+
+    @extend .card;
+
+}
+
+.card6{
+  background-image: url("../../../../../public/homeNoAuth/imgMobile.png");
+    margin-bottom: 40px;
+    transition: .5s ease;
+
+    @extend .card;
+
+}

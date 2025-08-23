@@ -49,17 +49,23 @@
         }
 
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     .navBtn{
         border-color: #fff;
         font-size: 14px;
     }
 
-    .container div{
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 2rem;
+    .container {
+        margin-bottom: 3rem;
+        justify-content: center;
+        
+        div {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                margin-top: 2rem;
+
+            }
     }
 }
 
