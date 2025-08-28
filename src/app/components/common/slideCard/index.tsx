@@ -1,12 +1,17 @@
+import { SeriesType } from "@/services/seriesServices";
 import styles from "./styles.module.scss";
 
-export default function SlideCard(){
+interface props{
+    series: SeriesType;
+}
+
+export default function SlideCard({ series }: props){
     return (
         <>
             <div className={styles.slide}>
-                <img src="" alt="" className={styles.slideImg}/>
-                <p className={styles.slideTitle}></p>
-                <p className={styles.slideDescription}></p>
+                <img src={`${series.thumbnailUrl}`} alt={series.name} className={styles.slideImg}/>
+                <p className={styles.slideTitle}>{series.name}</p>
+                <p className={styles.slideDescription}>{series.synopsis}</p>
             </div>
         </>
     )

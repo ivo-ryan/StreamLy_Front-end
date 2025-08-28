@@ -1,4 +1,4 @@
-@import "../../../colors.module.scss";
+@use "../../../colors.module.scss" as *;
 
 .ctaSection{
     display: flex;
