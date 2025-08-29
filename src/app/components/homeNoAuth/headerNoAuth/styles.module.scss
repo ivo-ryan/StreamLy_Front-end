@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $ligthRed;
+    background-color: $lightRed;
     gap: 1rem;
     padding: 10px 0;
 }
@@ -32,14 +32,14 @@
             padding: 8px 20px;
             background-color: transparent;
             border-radius: 6px;
-            color: $ligthGray;
+            color: $lightGray;
             border: 1px solid transparent;
             transition: 0.5s ease;
             text-decoration: none;
 
             &:hover{
                 color: #fff;
-                border-color: $ligthRed;
+                border-color: $lightRed;
                 transform: scale(1.2);
             }
 

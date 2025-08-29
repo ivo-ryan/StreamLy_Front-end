@@ -14,9 +14,9 @@
     align-items: center;
     padding: 10px 0;
     border-radius: 4px;
-    color: $ligthGray;
+    color: $lightGray;
     text-decoration: none;
-    border: 1px solid  $ligthGray;
+    border: 1px solid  $lightGray;
     width: 150px;
 
     .btnImg{
@@ -51,7 +51,7 @@
 .subTitle{
     font-size: 18px;
     font-weight: bold;
-    color: $ligthRed;
+    color: $lightRed;
 }
 
 .title{
@@ -62,7 +62,7 @@
 
 .description{
     font-size: 20px;
-    color: $ligthGray;
+    color: $lightGray;
     padding: 20px 0px 40px 0px;
 }
 
@@ -79,7 +79,7 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    border: 2px solid $ligthRed;
+    border: 2px solid $lightRed;
     transition: .5s ease;
 
     .btnImg{
@@ -87,7 +87,7 @@
     }
 
     &:hover{
-        color: $ligthGray;
+        color: $lightGray;
         border-color: $darkRed;
         background-color: transparent;
     }

@@ -14,8 +14,9 @@ export default function SlideSection ( {newstSeries}: props ){
                 <p className={styles.sectionTitle}>AULAS JÁ DISPONÍVEIS</p>
                 <SlideComponent series={newstSeries}/>
                 <Link href={"/register"} className={styles.slideSectionBtn}>
-                    Se cadastre para acessar!
+                    Se cadastre para acessar !
                 </Link>
+
             </div>
         
         </>
