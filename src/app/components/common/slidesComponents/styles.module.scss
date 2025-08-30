@@ -1,0 +1,13 @@
+.container{
+    width: 90%;
+}
+
+.slide{
+  width: 280px !important; /* largura do card */
+}
+
+@media (max-width: 400px) {
+    .container{
+        width: 95%;
+    }
+}

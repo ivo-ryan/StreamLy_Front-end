@@ -12,11 +12,11 @@
     "aos": "^2.3.4",
     "axios": "^1.11.0",
     "bootstrap": "^5.3.7",
+    "keen-slider": "^6.8.6",
     "next": "15.4.7",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "sass": "^1.90.0",
-    "swiper": "^11.2.10",
     "swr": "^2.3.6"
   },
   "devDependencies": {
