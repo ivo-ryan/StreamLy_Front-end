@@ -15,19 +15,25 @@ interface props {
 
 export default function SlideComponent( {series}: props ){
       const [currentSlide, setCurrentSlide] = useState(0);
+      const [loaded, setLoaded] = useState(false);
 
-  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+ const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
-    slides: { perView: 4, spacing: 10 },
+    created() {
+      setLoaded(true);
+    },
+  
+    slides: { perView: 4, spacing: 10 , origin: "center"},
+    mode: "snap",
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
      breakpoints: {
-      "(min-width: 640px)": {
-        slides: { perView: 2, spacing: 15 },
+      "(max-width: 800px)": {
+        slides: { perView: 2, spacing: 5 },
       },
-      "(min-width: 1024px)": {
-        slides: { perView: 4, spacing: 20 },
+      "(max-width: 1024px)": {
+        slides: { perView: 3, spacing: 8 },
       },
 
       "(max-width: 500px)": {
@@ -39,7 +45,7 @@ export default function SlideComponent( {series}: props ){
     return (
         <>
             <div className={styles.container}>
-                <div ref={sliderRef} className="keen-slider">
+                <div ref={sliderRef} className="keen-slider " style={{width: "93%"}}>
                     
                   
                 {
@@ -50,17 +56,33 @@ export default function SlideComponent( {series}: props ){
                     ))
                 }
                 </div>
-                 <div className="flex justify-center mt-4 gap-2">
-        {series.map((_, idx) => (
+                {loaded && instanceRef.current && (
+        <div className={styles.arrowContainer}>
           <button
-            key={idx}
-            className={`w-3 h-3 rounded-full ${
-              currentSlide === idx ? "bg-blue-500" : "bg-gray-300"
-            }`}
-            onClick={() => instanceRef.current?.moveToIdx(idx)}
-          />
-        ))}
-      </div>
+            onClick={() => instanceRef.current?.prev()}
+            className={styles.arrowLeft}
+          >
+            ←
+          </button>
+          <button
+            onClick={() => instanceRef.current?.next()}
+            className={styles.arrowRight} >
+            →
+          </button>
+        </div>
+      )}
+
+                 <div className={styles.containerBullets}>
+                      {series.map((_, idx) => (
+                          <span
+                            key={idx}
+                            className={`${styles.bullets} ${
+                              currentSlide === idx ? styles.bulletCur : styles.bulletNext
+                            }`}
+                            onClick={() => instanceRef.current?.moveToIdx(idx)}
+                          />
+                      ))}
+                  </div>
             </div>
         </>
     )
