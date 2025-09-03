@@ -1,6 +1,5 @@
 "use client"
 
-import styles from "./styles.module.scss";
 import { SeriesType } from "@/services/seriesServices";
 
 import SlideCard from "../slideCard";
@@ -23,7 +22,7 @@ export default function SlideComponent( {series}: props ){
  
     return (
         <>
-            <div className={styles.container}>
+            <div >
               		<div className="d-flex flex-column align-items-center justify-content-center py-4">
                       <Splide
                         options={{
