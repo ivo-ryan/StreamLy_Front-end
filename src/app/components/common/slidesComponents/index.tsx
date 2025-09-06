@@ -3,8 +3,18 @@
 import { SeriesType } from "@/services/seriesServices";
 
 import SlideCard from "../slideCard";
-import { Splide, SplideSlide } from "splide-nextjs/react-splide";
 import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css';
+import dynamic from "next/dynamic";
+
+const Splide = dynamic(
+  () => import("splide-nextjs/react-splide").then(mod => mod.Splide),
+  { ssr: false }
+);
+
+const SplideSlide = dynamic(
+  () => import("splide-nextjs/react-splide").then(mod => mod.SplideSlide),
+  { ssr: false }
+);
 
 
 interface props {
