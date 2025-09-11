@@ -10,7 +10,6 @@ import { seriesService } from "@/services/seriesServices";
 export default async  function Home() {
 
   const series = await seriesService.getNewstSeries();
-  console.log(series)
 
   return (
       <>
